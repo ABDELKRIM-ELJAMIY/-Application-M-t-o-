@@ -1,0 +1,39 @@
+$background-color :linear-gradient(230deg, blue, rgba(255, 255, 0, 0));
+$global-fontfamily :"poppins",
+sans-serif;
+
+@mixin global-par {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin body-par {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: $background-color;
+
+}
+
+@mixin container {
+    position: relative;
+    width: 400px;
+    height: 555px;
+    background: purple;
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 20px
+}
+
+* {
+    @include global-par;
+}
+
+body {
+    @include body-par;
+}
+
+.container {
+    @include container;
+}
