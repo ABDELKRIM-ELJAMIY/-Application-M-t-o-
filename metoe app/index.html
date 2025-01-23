@@ -4,20 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meteo app</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
 <body>
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/Black and Cyan Light Technology Thanks for Watching  Video.mp4" type="video/mp4">
+        </video>
     <div class="container">
-        <div class="serch-box">
-            <box-icon type='solid' name='map'></box-icon>
-            <input type="text" placeholder=" enter the city name">
-            <button><box-icon name='search-alt-2'></box-icon></button>
+        <div class="search-box">
+            <input type="text" id="locationInput" placeholder="Enter the city name">
+            <button id="searchButton"><box-icon name='search-alt-2'></box-icon></button>
+        </div>
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img id="weatherIcon" src="/images/animated/cloudy-night-1.svg" alt="Weather Icon">
+                        <h2 id="location"></h2>
+                        <p class="temperature" id="temperature"></p>
+                        <p class="description" id="description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <box-icon name='water' id="hum"></box-icon>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span id="humidity"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="wind">
+                <box-icon name='wind'></box-icon>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span id="windDirection">wind speed:2.37km/h</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+    <script src="/script.js"></script>
 </body>
 
 </html>
