@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather App prof</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
 <body>
-        <video autoplay loop muted plays-inline class="background-clip">
-            <source src="images/Black and Cyan Light Technology Thanks for Watching  Video.mp4" type="video/mp4">
-        </video>
+    <section class="cont">
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="images/Black and Cyan Light Technology Thanks for Watching  Video.mp4" type="video/mp4">
+    </video>
+
     <div class="container">
         <div class="search-box">
             <input type="text" id="locationInput" placeholder="Enter the city name">
             <button id="searchButton"><box-icon name='search-alt-2'></box-icon></button>
+            <button id="addToFavorites"><box-icon name='star'></box-icon></button>
+            <button id="toggleCartButton" class="toggle-cart-btn"><box-icon name='chevron-right'></box-icon></button>
+            
         </div>
 
         <div class="weather-box">
@@ -34,24 +39,28 @@
 
         <div class="weather-details">
             <div class="humidity">
-                <box-icon name='water' id="hum"></box-icon>
                 <div class="text">
                     <div class="info-humidity">
-                        <span id="humidity"></span>
+                        <box-icon name='water' id="hum"></box-icon> <span id="humidity"></span>
                     </div>
                 </div>
             </div>
             <div class="wind">
-                <box-icon name='wind'></box-icon>
                 <div class="text">
-                    <div class="info-humidity">
-                        <span id="windDirection">wind speed:2.37km/h</span>
+                    <div class="info-wind">
+                        <box-icon name='wind'></box-icon><span id="windDirection"></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<div  class="cont-favorit">
+    <div class="favorites-section" >
+        <h3>Favorites</h3>
+        <ul id="favorites"></ul>
+    </div>
+</div>
+</section>
     <script src="/script.js"></script>
 </body>
-
 </html>
