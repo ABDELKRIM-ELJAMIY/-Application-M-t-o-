@@ -113,12 +113,12 @@ function toggleFavoritesDisplay() {
     }
 }
 
-// Ajout de l'événement au bouton
+
 const showFavoritesButton = document.getElementById("showFavoritesButton");
 showFavoritesButton.addEventListener("click", toggleFavoritesDisplay);
 
-// Initialisation de l'état du conteneur
+
 window.addEventListener('load', () => {
     const favoritesContainer = document.getElementById("favoritesContainer");
-    favoritesContainer.style.display = "none"; // Cacher par défaut
+    favoritesContainer.style.display = "none"; 
 });
